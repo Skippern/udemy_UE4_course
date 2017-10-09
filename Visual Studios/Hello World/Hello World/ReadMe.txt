@@ -1,11 +1,11 @@
 ========================================================================
-    CONSOLE APPLICATION : [!output PROJECT_NAME] Project Overview
+    CONSOLE APPLICATION : Hello World Project Overview
 ========================================================================
 
-AppWizard has created this [!output PROJECT_NAME] application for you.
+AppWizard has created this Hello World application for you.
 
 This file contains a summary of what you will find in each of the files that
-make up your [!output PROJECT_NAME] application.
+make up your Hello World application.
 
 
     This is the main project file for VC++ projects generated using an Application Wizard.
@@ -26,7 +26,7 @@ Other standard files:
 
 StdAfx.h, StdAfx.cpp
     These files are used to build a precompiled header (PCH) file
-    named [!output PROJECT_NAME].pch and a precompiled types file named StdAfx.obj.
+    named Hello World.pch and a precompiled types file named StdAfx.obj.
 
 /////////////////////////////////////////////////////////////////////////////
 Other notes:
