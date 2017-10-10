@@ -6,25 +6,38 @@
 //  Copyright © 2017 Aun Johnsen. All rights reserved.
 //
 
+#include "main.h"
 #include <iostream>
 
 using namespace std;
 
-// Prototypes
-void PrintIntro();
-string GetGuessAndPrintBack();
 
 
 // entry point for our application
 int main(int argc, const char * argv[]) {
     
     PrintIntro();
-    
-    string Guess = GetGuessAndPrintBack();
+    PlayGame();
 
     
-    cout << endl;
     return 0;
+}
+
+// plays the game
+void PlayGame() {
+    constexpr int NUMBER_OF_TURNS = 5;
+
+    for (int count = 0; count < NUMBER_OF_TURNS; count++) {
+        string Guess = GetGuess();
+        PrintBack(Guess);
+        cout << endl;
+    }
+    return;
+}
+
+void PrintBack(string Guess) {
+    cout << "You guessed: " << Guess << endl;
+
 }
 
 // introduce the game
@@ -39,13 +52,11 @@ void PrintIntro() {
 }
 
 // get a guess from the player
-string GetGuessAndPrintBack() {
+string GetGuess() {
     string Guess = "";
     cout << "\nPlace your guess: ";
     getline(cin, Guess);
     cout << endl;
-    // repeat the guess back to them
-    cout << "You guessed: " << Guess << endl;
 
     return Guess;
 }
