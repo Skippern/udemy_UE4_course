@@ -8,10 +8,9 @@
 
 #include "main.h"
 #include <iostream>
+#include "fBullCowGame.hpp"
 
-using namespace std;
-
-
+fBullCowGame BCGame; // instantiate a new game
 
 // entry point for our application
 int main(int argc, const char * argv[]) {
@@ -27,47 +26,46 @@ int main(int argc, const char * argv[]) {
 }
 
 bool AskToPlayAgain() {
-    cout << "Do you want to play again? (y/n)";
-    string Response = "";
-    getline(cin, Response);
+    std::cout << "Do you want to play again? (y/n)";
+    std::string Response = "";
+    std::getline(std::cin, Response);
     
     return (Response[0] == 'y' || Response[0] == 'Y');
 }
 
 // plays the game
 void PlayGame() {
-    constexpr int NUMBER_OF_TURNS = 5;
+    BCGame.Reset();
 
     for (int count = 0; count < NUMBER_OF_TURNS; count++) {
-        string Guess = GetGuess();
+        std::string Guess = GetGuess();
         PrintBack(Guess);
-        cout << endl;
+        std::cout << std::endl;
     }
     return;
 }
 
-void PrintBack(string Guess) {
-    cout << "You guessed: " << Guess << endl;
+void PrintBack(std::string Guess) {
+    std::cout << "You guessed: " << Guess << std::endl;
 
 }
 
 // introduce the game
 void PrintIntro() {
-    constexpr int WORD_LENGTH = 5;
     
-    cout << "Welcome to Bulls and Cows, a fun word game\n";
-    cout << "Can you guess the " << WORD_LENGTH;
-    cout << " letter isogram I'm thinking of?\n";
+    std::cout << "Welcome to Bulls and Cows, a fun word game\n";
+//    std::cout << "Can you guess the " << WORD_LENGTH;
+    std::cout << " letter isogram I'm thinking of?\n";
     
     return;
 }
 
 // get a guess from the player
-string GetGuess() {
-    string Guess = "";
-    cout << "\nPlace your guess: ";
-    getline(cin, Guess);
-    cout << endl;
+std::string GetGuess() {
+    std::string Guess = "";
+    std::cout << "\nPlace your guess: ";
+    std::getline(std::cin, Guess);
+    std::cout << std::endl;
 
     return Guess;
 }

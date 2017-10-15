@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		20389D2B1F8C065700AEFD4D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20389D2A1F8C065700AEFD4D /* main.cpp */; };
+		20389D341F93E5A500AEFD4D /* fBullCowGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20389D321F93E5A500AEFD4D /* fBullCowGame.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +27,8 @@
 		20389D271F8C065700AEFD4D /* BullCowGame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BullCowGame; sourceTree = BUILT_PRODUCTS_DIR; };
 		20389D2A1F8C065700AEFD4D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		20389D311F8D4B7F00AEFD4D /* main.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
+		20389D321F93E5A500AEFD4D /* fBullCowGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fBullCowGame.cpp; sourceTree = "<group>"; };
+		20389D331F93E5A500AEFD4D /* fBullCowGame.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fBullCowGame.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,8 @@
 			children = (
 				20389D2A1F8C065700AEFD4D /* main.cpp */,
 				20389D311F8D4B7F00AEFD4D /* main.h */,
+				20389D321F93E5A500AEFD4D /* fBullCowGame.cpp */,
+				20389D331F93E5A500AEFD4D /* fBullCowGame.hpp */,
 			);
 			path = BullCowGame;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20389D2B1F8C065700AEFD4D /* main.cpp in Sources */,
+				20389D341F93E5A500AEFD4D /* fBullCowGame.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +257,7 @@
 				20389D301F8C065700AEFD4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
