@@ -17,6 +17,7 @@ void PlayGame();
 void PrintIntro();
 std::string GetGuess();
 void PrintBack(std::string Guess);
+bool AskToPlayAgain();
 
 
 #endif /* main_h */

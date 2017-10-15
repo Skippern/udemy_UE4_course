@@ -16,11 +16,22 @@ using namespace std;
 // entry point for our application
 int main(int argc, const char * argv[]) {
     
-    PrintIntro();
-    PlayGame();
+    do {
+        PrintIntro();
+        PlayGame();
+    }
+    while (AskToPlayAgain());
 
     
-    return 0;
+    return 0; // exit the application
+}
+
+bool AskToPlayAgain() {
+    cout << "Do you want to play again? (y/n)";
+    string Response = "";
+    getline(cin, Response);
+    
+    return (Response[0] == 'y' || Response[0] == 'Y');
 }
 
 // plays the game
