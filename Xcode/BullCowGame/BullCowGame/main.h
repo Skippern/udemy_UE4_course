@@ -15,8 +15,8 @@
 
 void PlayGame();
 void PrintIntro();
-std::string GetGuess();
-void PrintBack(std::string Guess);
+std::string GetTry();
+void PrintBack(std::string Try);
 bool AskToPlayAgain();
 
 

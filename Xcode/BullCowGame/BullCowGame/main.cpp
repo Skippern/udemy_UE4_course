@@ -37,16 +37,16 @@ bool AskToPlayAgain() {
 void PlayGame() {
     BCGame.Reset();
 
-    for (int count = 0; count < NUMBER_OF_TURNS; count++) {
-        std::string Guess = GetGuess();
-        PrintBack(Guess);
+    for (int count = 0; count < 5; count++) {
+        std::string Try = GetTry();
+        PrintBack(Try);
         std::cout << std::endl;
     }
     return;
 }
 
-void PrintBack(std::string Guess) {
-    std::cout << "You guessed: " << Guess << std::endl;
+void PrintBack(std::string Try) {
+    std::cout << "You Tryed: " << Try << std::endl;
 
 }
 
@@ -54,18 +54,18 @@ void PrintBack(std::string Guess) {
 void PrintIntro() {
     
     std::cout << "Welcome to Bulls and Cows, a fun word game\n";
-//    std::cout << "Can you guess the " << WORD_LENGTH;
+//    std::cout << "Can you Try the " << WORD_LENGTH;
     std::cout << " letter isogram I'm thinking of?\n";
     
     return;
 }
 
-// get a guess from the player
-std::string GetGuess() {
-    std::string Guess = "";
-    std::cout << "\nPlace your guess: ";
-    std::getline(std::cin, Guess);
+// get a Try from the player
+std::string GetTry() {
+    std::string Try = "";
+    std::cout << "\nPlace your Try: ";
+    std::getline(std::cin, Try);
     std::cout << std::endl;
 
-    return Guess;
+    return Try;
 }

@@ -29,7 +29,7 @@ bool fBullCowGame::IsGameWon() const
     return false;
 }
 
-bool fBullCowGame::CheckGuessValidity(std::string)
+bool fBullCowGame::CheckTryValidity(std::string)
 {
     return false;
 }
