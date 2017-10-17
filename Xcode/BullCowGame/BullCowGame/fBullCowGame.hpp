@@ -14,24 +14,34 @@
 #include <stdio.h>
 #include <iostream>
 
+using FString = std::string;
+using int32 = int;
+
+struct fBullCowCount {
+    int32 Bulls = 0;
+    int32 Cows = 0;
+};
+
 class fBullCowGame {
-    
+
 public:
     fBullCowGame(); // Constructor
     
-    int GetMaxTries() const;
-    int GetCurrentTry() const;
+    int32 GetMaxTries() const;
+    int32 GetHiddenWordLength() const;
+    int32 GetCurrentTry() const;
     bool IsGameWon() const;
+    bool CheckTryValidity(FString) const;
 
     void Reset(); // TODO make a more rich return value
-    bool CheckTryValidity(std::string);
-    
+    fBullCowCount SubmitGuess(FString);
     
     
 private:
     int MyCurrentTry;
     int MyMaxTries;
-    bool IsIsogram(std::string);
+    bool IsIsogram(FString);
+    FString MyHiddenWord;
     
 };
 

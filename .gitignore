@@ -34,3 +34,6 @@
 # Logging
 *.log
 *.tlog
+
+# XCode things
+*/xcusersdata/*
