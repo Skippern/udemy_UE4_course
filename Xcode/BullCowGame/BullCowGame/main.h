@@ -12,11 +12,14 @@
 #include <iostream>
 #include <string>
 
+using FText = std::string;
+using int32 = int;
+
 
 void PlayGame();
 void PrintIntro();
-std::string GetTry();
-void PrintBack(std::string Try);
+FText GetTry();
+void PrintBack(FText Try);
 bool AskToPlayAgain();
 
 
