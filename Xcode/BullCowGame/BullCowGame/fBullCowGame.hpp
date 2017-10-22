@@ -22,6 +22,14 @@ struct fBullCowCount {
     int32 Cows = 0;
 };
 
+enum class eWordStatus {
+    Invalid,
+    OK,
+    Not_Isogram,
+    Wrong_Length,
+    Not_Lowercase,
+};
+
 class fBullCowGame {
 
 public:
@@ -31,10 +39,10 @@ public:
     int32 GetHiddenWordLength() const;
     int32 GetCurrentTry() const;
     bool IsGameWon() const;
-    bool CheckTryValidity(FString) const;
+    eWordStatus CheckTryValidity(FString) const;
 
     void Reset(); // TODO make a more rich return value
-    fBullCowCount SubmitGuess(FString);
+    fBullCowCount SubmitValidGuess(FString);
     
     
 private:

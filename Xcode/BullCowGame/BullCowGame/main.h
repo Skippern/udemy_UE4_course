@@ -18,7 +18,7 @@ using int32 = int;
 
 void PlayGame();
 void PrintIntro();
-FText GetTry();
+FText GetValidTry();
 void PrintBack(FText Try);
 bool AskToPlayAgain();
 

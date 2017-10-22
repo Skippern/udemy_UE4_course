@@ -33,12 +33,24 @@ bool fBullCowGame::IsGameWon() const
     return false;
 }
 
-bool fBullCowGame::CheckTryValidity(FString) const
+eWordStatus fBullCowGame::CheckTryValidity(FString Try) const
 {
-    return false;
+    if (false) // Not an isogram
+    {
+        return eWordStatus::Not_Isogram;
+    } else if (false) // Not lowercase
+    {
+        return eWordStatus::Not_Lowercase;
+    } else if (Try.length() != GetHiddenWordLength()) // wrong length
+    {
+        return eWordStatus::Wrong_Length;
+    } else
+    {
+        return eWordStatus::OK;
+    }
 }
 
-fBullCowCount fBullCowGame::SubmitGuess(FString Guess) {
+fBullCowCount fBullCowGame::SubmitValidGuess(FString Guess) {
     
     // increase turn number
     MyCurrentTry++;
