@@ -14,6 +14,7 @@ fBullCowGame::fBullCowGame() { fBullCowGame::Reset(); }
 int32 fBullCowGame::GetMaxTries() const { return fBullCowGame::MyMaxTries; }
 int32 fBullCowGame::GetCurrentTry() const { return fBullCowGame::MyCurrentTry; }
 int32 fBullCowGame::GetHiddenWordLength() const { return MyHiddenWord.length(); }
+bool fBullCowGame::IsGameWon() const { return bGameIsWon; }
 
 void fBullCowGame::Reset()
 {
@@ -21,6 +22,7 @@ void fBullCowGame::Reset()
     constexpr int32 MAX_TRIES = 5;
     const FString HIDDEN_WORD = "planet";
 
+    bGameIsWon = false;
     fBullCowGame::MyMaxTries = MAX_TRIES;
     fBullCowGame::MyCurrentTry = 1;
     MyHiddenWord = HIDDEN_WORD;
@@ -28,10 +30,6 @@ void fBullCowGame::Reset()
     return;
 }
 
-bool fBullCowGame::IsGameWon() const
-{
-    return false;
-}
 
 eWordStatus fBullCowGame::CheckTryValidity(FString Try) const
 {
@@ -69,6 +67,12 @@ fBullCowCount fBullCowGame::SubmitValidGuess(FString Guess) {
         if (isBullMatch) BullCowCount.Bulls++;
         else if (isMatch) BullCowCount.Cows++;
         std::cout << std::endl;
+    }
+    
+    if (BullCowCount.Bulls == GetHiddenWordLength()) {
+        bGameIsWon = true;
+    } else {
+        bGameIsWon = false;
     }
     
     return  BullCowCount;

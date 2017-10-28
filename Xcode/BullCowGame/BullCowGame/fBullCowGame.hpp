@@ -50,6 +50,7 @@ private:
     int MyMaxTries;
     bool IsIsogram(FString);
     FString MyHiddenWord;
+    bool bGameIsWon;
     
 };
 

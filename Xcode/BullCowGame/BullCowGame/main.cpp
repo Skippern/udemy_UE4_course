@@ -45,7 +45,8 @@ bool AskToPlayAgain() {
 void PlayGame() {
     BCGame.Reset();
 
-    for (int32 count = 0; count < 5; count++) {
+    while(!BCGame.IsGameWon() && BCGame.GetCurrentTry() <= BCGame.GetMaxTries()) {
+    
         FText Try = GetValidTry();
         
         
@@ -60,7 +61,7 @@ void PlayGame() {
 // introduce the game
 void PrintIntro() {
     
-    std::cout << "Welcome to Bulls and Cows, a fun word game\n";
+    std::cout << "\n\nWelcome to Bulls and Cows, a fun word game\n";
     std::cout << "Can you Try the " << BCGame.GetHiddenWordLength();
     std::cout << " letter isogram I'm thinking of?\n";
     
