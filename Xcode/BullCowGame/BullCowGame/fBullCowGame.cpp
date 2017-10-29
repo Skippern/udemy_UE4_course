@@ -30,7 +30,6 @@ void fBullCowGame::Reset()
     return;
 }
 
-
 eWordStatus fBullCowGame::CheckTryValidity(FString Try) const
 {
     if (false) // Not an isogram

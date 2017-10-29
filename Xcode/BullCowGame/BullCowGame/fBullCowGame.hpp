@@ -40,7 +40,7 @@ public:
     int32 GetCurrentTry() const;
     bool IsGameWon() const;
     eWordStatus CheckTryValidity(FString) const;
-
+    
     void Reset(); // TODO make a more rich return value
     fBullCowCount SubmitValidGuess(FString);
     

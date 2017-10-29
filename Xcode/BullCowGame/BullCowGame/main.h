@@ -21,6 +21,7 @@ void PrintIntro();
 FText GetValidTry();
 void PrintBack(FText Try);
 bool AskToPlayAgain();
+void PrintGameSummary();
 
 
 #endif /* main_h */

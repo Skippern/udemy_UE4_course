@@ -34,7 +34,7 @@ int main(int argc, const char * argv[]) {
 }
 
 bool AskToPlayAgain() {
-    std::cout << "Do you want to play again? (y/n)";
+    std::cout << "Do you want to play again? (y/n) ";
     FText Response = "";
     std::getline(std::cin, Response);
     
@@ -44,8 +44,7 @@ bool AskToPlayAgain() {
 // plays the game
 void PlayGame() {
     BCGame.Reset();
-
-    while(!BCGame.IsGameWon() && BCGame.GetCurrentTry() <= BCGame.GetMaxTries()) {
+        while(!BCGame.IsGameWon() && BCGame.GetCurrentTry() <= BCGame.GetMaxTries()) {
     
         FText Try = GetValidTry();
         
@@ -55,6 +54,7 @@ void PlayGame() {
         std::cout << " Cows = " << bcResult.Cows;
         std::cout << std::endl;
     }
+    PrintGameSummary();
     return;
 }
 
@@ -99,3 +99,13 @@ FText GetValidTry() {
     } while (Status != eWordStatus::OK); // keep looping until no errors
     return Try;
 }
+
+void rintGameSummary() {
+    if (BCGame.IsGameWon()) {
+        std::cout << "Congratulations, you won!" << std::endl;
+    } else {
+        std::cout << "Bad luck!" << std::endl;
+    }
+    return;
+}
+
