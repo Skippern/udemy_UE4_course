@@ -2,31 +2,22 @@ language: cpp
 matrix: 
   include: 
     before_install: 
-      ? "chmod +x configure"
-      : ~
-      ? "sudo apt-get update -qq"
-      : ~
+      - "chmod +x configure"
+      - "sudo apt-get update -qq"
     compiler: gcc
     dist: trusty
     install: 
-      ? "make get-deps"
-      : ~
+      - "make get-deps"
     os: linux
     sudo: false
   ? 
     before_install: 
-      ? "brew outdated xctools || brew upgrade xctools"
-      : ~
-      ? "brew update"
-      : ~
-      ? "chmod +x configure"
-      : ~
-      ? "gem install cocoapods -v '0.32.1'"
-      : ~
+      - "brew outdated xctools || brew upgrade xctools"
+      - "brew update"
+      - "chmod +x configure"
+      - "gem install cocoapods -v '0.32.1'"
     compiler: clang
     install: 
-      ? "make get-deps"
-      : ~
+      - "make get-deps"
     os: osx
     osx_image: xcode8.3
-  : ~
