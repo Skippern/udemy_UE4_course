@@ -1,11 +1,22 @@
-{
-  "language": "cpp",
-  "os": {
-    "osx",
-    "linux",
-    "windows",
-  },
-  "dist": "trusty",
-  "sudo": false,
-  "group": "stable",
-}
+language: cpp
+
+matrix:
+  include:
+    - os: linux
+      dist: trusty
+      sudo: false
+      compiler: gcc
+      before_install:
+        - sudo apt-get update -qq
+      install:
+        - make get-deps
+
+    - os: osx
+      osx_image: xcode8.3
+      compiler: clang
+      before_install:
+        - brew update
+        - brew outdated xctools || brew upgrade xctools
+        - gem install cocoapods -v '0.32.1'
+      install:
+        - make get-deps
