@@ -1,6 +1,8 @@
 get-deps:
 
-all: mac linux
+all: test mac linux
+
+test:
 
 mac:
 
