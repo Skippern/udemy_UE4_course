@@ -1,22 +1,33 @@
-language: cpp
+{
+"language": "cpp"
 
-matrix:
-  include:
-    - os: linux
-      dist: trusty
-      sudo: false
-      compiler: gcc
-      before_install:
-        - sudo apt-get update -qq
-      install:
-        - make get-deps
-
-    - os: osx
-      osx_image: xcode8.3
-      compiler: clang
-      before_install:
-        - brew update
-        - brew outdated xctools || brew upgrade xctools
-        - gem install cocoapods -v '0.32.1'
-      install:
-        - make get-deps
+"matrix":{
+  "include":{
+    "os": "linux" {
+      "dist": "trusty"
+      "sudo": false
+      "compiler": "gcc"
+      "before_install": {
+        "sudo apt-get update -qq"
+        "chmod +x configure"
+        }
+      install:{
+        "make get-deps"
+        }
+      }
+    "os": "osx"{
+      "osx_image": "xcode8.3"
+      "compiler": "clang"
+      "before_install":{
+        "brew update"
+        "brew outdated xctools || brew upgrade xctools"
+        "gem install cocoapods -v '0.32.1'"
+        "chmod +x configure"
+        }
+      "install":{
+        "make get-deps"
+        }
+      }
+   }
+  }
+}
