@@ -2,7 +2,7 @@
 "language": "cpp",
 
 "matrix":{
-  "include":{
+  "include":,
     "os": "linux" {
       "dist": "trusty",
       "sudo": false,
@@ -28,6 +28,5 @@
         "make get-deps",
         },
       },
-   },
   },
 },
