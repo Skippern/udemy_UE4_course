@@ -1,0 +1,10 @@
+{
+  "language": "cpp",
+  "os":
+    - "osx",
+    - "linux",
+    - "windows",
+  "dist": "trusty",
+  "sudo": false,
+  
+}
