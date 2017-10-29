@@ -4,7 +4,7 @@
     "osx",
     "linux",
     "windows",
-  }
+  },
   "dist": "trusty",
   "sudo": false,
   "group": "stable",
