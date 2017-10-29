@@ -10,11 +10,11 @@
       "before_install": {
         "sudo apt-get update -qq"
         "chmod +x configure"
-        }
+        },
       install:{
         "make get-deps"
-        }
-      }
+        },
+      },
     "os": "osx"{
       "osx_image": "xcode8.3"
       "compiler": "clang"
@@ -23,11 +23,11 @@
         "brew outdated xctools || brew upgrade xctools"
         "gem install cocoapods -v '0.32.1'"
         "chmod +x configure"
-        }
+        },
       "install":{
         "make get-deps"
-        }
-      }
-   }
-  }
-}
+        },
+      },
+   },
+  },
+},
