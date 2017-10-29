@@ -15,8 +15,8 @@ matrix:
       os: osx
       osx_image: xcode8.3
       before_install: 
-        - "brew outdated xctools || brew upgrade xctools"
         - "brew update"
+        - "brew outdated xctool || brew upgrade xctool"
         - "chmod +x configure"
         - "gem install cocoapods -v '0.32.1'"
       compiler: clang
