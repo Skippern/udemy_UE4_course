@@ -40,6 +40,11 @@
 
 ## Visual Studio
 .vs/
+*/.suo
+*.ipch
+*.idb
+*pdb
+*/Browse.VC.db
 
 ## Xcode
 
