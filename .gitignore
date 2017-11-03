@@ -39,12 +39,13 @@
 .DS_Store
 
 ## Visual Studio
-.vs/
+*.vs/*
 */.suo
 *.ipch
 *.idb
-*pdb
-*/Browse.VC.db
+*.pdb
+*Browse.VC.db
+*/Debug/*
 
 ## Xcode
 
