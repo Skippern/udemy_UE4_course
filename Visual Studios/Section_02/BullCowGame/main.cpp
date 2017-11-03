@@ -10,7 +10,7 @@ using FText = std::string;
 using int32 = int;
 
 void PlayGame();
-void PrintIntro();
+FText PrintIntro();
 FText GetValidTry();
 void PrintBack(FText Try);
 bool AskToPlayAgain();
@@ -50,14 +50,14 @@ void PlayGame() {
 	return;
 }
 
-void PrintIntro() {
-	eWordStatus = eWordStatus::Invalid;
+FText PrintIntro() {
+	eWordStatus Status = eWordStatus::Invalid;
 	FText Try = "";
 	do {
 		Try = "";
 		std::cout << "\n\nTry " << BCGame.GetCurrentTry() << " / " << BCGame.GetMaxTries() << ": Place your Try: ";
 		std::getline(std::cin, Try);
-		std::cout << std:endl;
+		std::cout << std::endl;
 
 		Status = BCGame.CheckTryValidity(Try);
 		switch (Status)
