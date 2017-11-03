@@ -5,40 +5,63 @@
 //  Created by Aun Johnsen on 10/15/17.
 //  Copyright © 2017 Aun Johnsen. All rights reserved.
 //
-
 #include "fBullCowGame.hpp"
-
 
 fBullCowGame::fBullCowGame() { fBullCowGame::Reset(); }
 
-int32 fBullCowGame::GetMaxTries() const { return fBullCowGame::MyMaxTries; }
 int32 fBullCowGame::GetCurrentTry() const { return fBullCowGame::MyCurrentTry; }
 int32 fBullCowGame::GetHiddenWordLength() const { return MyHiddenWord.length(); }
 bool fBullCowGame::IsGameWon() const { return bGameIsWon; }
 
+int32 fBullCowGame::GetMaxTries() const
+{
+    TMap<int32, int32> WordLenthToMaxTries { {1, 2}, {2, 3}, {3, 4}, {4, 7}, {5, 10}, {6, 16}, {7, 20}, {8, 30}, {9, 45}, {10, 60} };
+    return WordLenthToMaxTries[GetHiddenWordLength()];
+}
+
 void fBullCowGame::Reset()
 {
-//    constexpr int32 WORD_LENGTH = 5;
-    constexpr int32 MAX_TRIES = 5;
     const FString HIDDEN_WORD = "planet";
 
     bGameIsWon = false;
-    fBullCowGame::MyMaxTries = MAX_TRIES;
     fBullCowGame::MyCurrentTry = 1;
     MyHiddenWord = HIDDEN_WORD;
     
     return;
 }
 
+bool fBullCowGame::IsIsogram(FString word) const
+{
+    TMap<char, bool> LetterSeen;
+    
+    for(auto letter : word)
+    {
+        letter = tolower(letter);
+        if ( LetterSeen[letter] == true) return false;
+        LetterSeen[letter] = true;
+    }
+    
+    return true;
+}
+
+bool fBullCowGame::IsLowercase(FString word) const
+{
+    for (auto letter : word)
+    {
+        if (letter != islower(letter)) return false;
+    }
+    return true;
+}
+
 eWordStatus fBullCowGame::CheckTryValidity(FString Try) const
 {
-    if (false) // Not an isogram
+    if (!IsIsogram(Try))
     {
         return eWordStatus::Not_Isogram;
-    } else if (false) // Not lowercase
+    } else if (!IsLowercase(Try))
     {
         return eWordStatus::Not_Lowercase;
-    } else if (Try.length() != GetHiddenWordLength()) // wrong length
+    } else if (Try.length() != GetHiddenWordLength())
     {
         return eWordStatus::Wrong_Length;
     } else
@@ -49,11 +72,8 @@ eWordStatus fBullCowGame::CheckTryValidity(FString Try) const
 
 fBullCowCount fBullCowGame::SubmitValidGuess(FString Guess) {
     
-    // increase turn number
     MyCurrentTry++;
-    // setup return variable
     fBullCowCount BullCowCount;
-    // loop through all letters in the guess
     for (int32 i = 0; i < MyHiddenWord.length(); i++) {
         bool isMatch = false;
         bool isBullMatch = false;

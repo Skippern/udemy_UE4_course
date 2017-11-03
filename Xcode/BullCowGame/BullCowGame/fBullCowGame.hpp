@@ -7,12 +7,14 @@
 //
 #pragma once
 
-
 #ifndef fBullCowGame_hpp
 #define fBullCowGame_hpp
 
 #include <stdio.h>
 #include <iostream>
+#include <map>
+
+#define TMap std::map
 
 using FString = std::string;
 using int32 = int;
@@ -33,7 +35,7 @@ enum class eWordStatus {
 class fBullCowGame {
 
 public:
-    fBullCowGame(); // Constructor
+    fBullCowGame(); 
     
     int32 GetMaxTries() const;
     int32 GetHiddenWordLength() const;
@@ -41,14 +43,14 @@ public:
     bool IsGameWon() const;
     eWordStatus CheckTryValidity(FString) const;
     
-    void Reset(); // TODO make a more rich return value
+    void Reset();
     fBullCowCount SubmitValidGuess(FString);
     
     
 private:
     int MyCurrentTry;
-    int MyMaxTries;
-    bool IsIsogram(FString);
+    bool IsIsogram(FString) const;
+    bool IsLowercase(FString) const;
     FString MyHiddenWord;
     bool bGameIsWon;
     

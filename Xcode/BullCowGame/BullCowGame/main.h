@@ -5,6 +5,7 @@
 //  Created by Aun Johnsen on 10/10/17.
 //  Copyright © 2017 Aun Johnsen. All rights reserved.
 //
+#pragma once
 
 #ifndef main_h
 #define main_h

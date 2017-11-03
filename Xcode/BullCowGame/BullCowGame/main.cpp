@@ -10,7 +10,6 @@
  This acts as the view in a MVC pattern, and is responsible for all
  user interaction, for game logic see the fBullCowGame class
  */
-
 #include "main.h"
 #include <iostream>
 #include "fBullCowGame.hpp"
@@ -74,7 +73,7 @@ FText GetValidTry() {
     FText Try = "";
     do {
         Try = "";
-        std::cout << "\nTry " << BCGame.GetCurrentTry() << ": Place your Try: ";
+        std::cout << "\nTry " << BCGame.GetCurrentTry() << " / " << BCGame.GetMaxTries() << ": Place your Try: ";
         std::getline(std::cin, Try);
         std::cout << std::endl;
 
@@ -100,7 +99,7 @@ FText GetValidTry() {
     return Try;
 }
 
-void rintGameSummary() {
+void PrintGameSummary() {
     if (BCGame.IsGameWon()) {
         std::cout << "Congratulations, you won!" << std::endl;
     } else {
