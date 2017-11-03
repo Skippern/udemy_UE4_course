@@ -48,7 +48,7 @@ bool fBullCowGame::IsLowercase(FString word) const
 {
     for (auto letter : word)
     {
-        if (letter != islower(letter)) return false;
+        if (letter != tolower(letter)) return false;
     }
     return true;
 }

@@ -48,7 +48,7 @@ public:
     
     
 private:
-    int MyCurrentTry;
+    int32 MyCurrentTry;
     bool IsIsogram(FString) const;
     bool IsLowercase(FString) const;
     FString MyHiddenWord;
