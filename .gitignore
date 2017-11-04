@@ -39,13 +39,19 @@
 .DS_Store
 
 ## Visual Studio
-*.vs/*
+*.vs/
 */.suo
 *.ipch
 *.idb
 *.pdb
-*Browse.VC.db
-*/Debug/*
+*.VC.db
+*/Debug/
+
+## Unreal Engine
+*/Binaries/
+*/Build/
+*/Intermediate/
+*/Saved/
 
 ## Xcode
 
