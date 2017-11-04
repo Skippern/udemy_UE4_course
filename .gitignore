@@ -48,10 +48,11 @@
 */Debug/
 
 ## Unreal Engine
-*/Binaries/
-*/Build/
-*/Intermediate/
-*/Saved/
+*/Binaries
+*/Build
+*/DerivedDataCache
+*/Intermediate
+*/Saved
 
 ## Xcode
 
