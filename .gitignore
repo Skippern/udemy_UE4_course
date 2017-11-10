@@ -116,3 +116,5 @@ UE4Editor/Section_03/BuildingEscape/DerivedDataCahce/
 UE4Editor/Section_03/BuildingEscape/Intermediate/
 UE4Editor/Section_03/BuildingEscape/Saved/
 UE4Editor/Section_03/BuildingEscape/Content/StarterContent/
+*BuiltData.uasset
+UE4Editor/Section_03/BuildingEscape/Content/*_BuiltData.uasset
