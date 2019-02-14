@@ -1,0 +1,445 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "BuildingEscape Mac Debug Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BuildingEscape",
+				"Mac",
+				"Debug",
+				"/Users/skippern/Documents/src/udemy_UE4_course/UE4Editor/Section_03/BuildingEscape 4.21/BuildingEscape.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.21"
+			}
+		},
+		{
+			"label": "BuildingEscape Mac Debug Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BuildingEscape",
+				"Mac",
+				"Debug",
+				"/Users/skippern/Documents/src/udemy_UE4_course/UE4Editor/Section_03/BuildingEscape 4.21/BuildingEscape.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"BuildingEscape Mac Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.21"
+			}
+		},
+		{
+			"label": "BuildingEscape Mac Debug Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BuildingEscape",
+				"Mac",
+				"Debug",
+				"/Users/skippern/Documents/src/udemy_UE4_course/UE4Editor/Section_03/BuildingEscape 4.21/BuildingEscape.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.21"
+			}
+		},
+		{
+			"label": "BuildingEscape Mac DebugGame Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BuildingEscape",
+				"Mac",
+				"DebugGame",
+				"/Users/skippern/Documents/src/udemy_UE4_course/UE4Editor/Section_03/BuildingEscape 4.21/BuildingEscape.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.21"
+			}
+		},
+		{
+			"label": "BuildingEscape Mac DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BuildingEscape",
+				"Mac",
+				"DebugGame",
+				"/Users/skippern/Documents/src/udemy_UE4_course/UE4Editor/Section_03/BuildingEscape 4.21/BuildingEscape.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"BuildingEscape Mac DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.21"
+			}
+		},
+		{
+			"label": "BuildingEscape Mac DebugGame Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BuildingEscape",
+				"Mac",
+				"DebugGame",
+				"/Users/skippern/Documents/src/udemy_UE4_course/UE4Editor/Section_03/BuildingEscape 4.21/BuildingEscape.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.21"
+			}
+		},
+		{
+			"label": "BuildingEscape Mac Development Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BuildingEscape",
+				"Mac",
+				"Development",
+				"/Users/skippern/Documents/src/udemy_UE4_course/UE4Editor/Section_03/BuildingEscape 4.21/BuildingEscape.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.21"
+			}
+		},
+		{
+			"label": "BuildingEscape Mac Development Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BuildingEscape",
+				"Mac",
+				"Development",
+				"/Users/skippern/Documents/src/udemy_UE4_course/UE4Editor/Section_03/BuildingEscape 4.21/BuildingEscape.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"BuildingEscape Mac Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.21"
+			}
+		},
+		{
+			"label": "BuildingEscape Mac Development Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BuildingEscape",
+				"Mac",
+				"Development",
+				"/Users/skippern/Documents/src/udemy_UE4_course/UE4Editor/Section_03/BuildingEscape 4.21/BuildingEscape.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.21"
+			}
+		},
+		{
+			"label": "BuildingEscape Mac Shipping Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BuildingEscape",
+				"Mac",
+				"Shipping",
+				"/Users/skippern/Documents/src/udemy_UE4_course/UE4Editor/Section_03/BuildingEscape 4.21/BuildingEscape.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.21"
+			}
+		},
+		{
+			"label": "BuildingEscape Mac Shipping Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BuildingEscape",
+				"Mac",
+				"Shipping",
+				"/Users/skippern/Documents/src/udemy_UE4_course/UE4Editor/Section_03/BuildingEscape 4.21/BuildingEscape.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"BuildingEscape Mac Shipping Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.21"
+			}
+		},
+		{
+			"label": "BuildingEscape Mac Shipping Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BuildingEscape",
+				"Mac",
+				"Shipping",
+				"/Users/skippern/Documents/src/udemy_UE4_course/UE4Editor/Section_03/BuildingEscape 4.21/BuildingEscape.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.21"
+			}
+		},
+		{
+			"label": "BuildingEscape Mac Test Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BuildingEscape",
+				"Mac",
+				"Test",
+				"/Users/skippern/Documents/src/udemy_UE4_course/UE4Editor/Section_03/BuildingEscape 4.21/BuildingEscape.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.21"
+			}
+		},
+		{
+			"label": "BuildingEscape Mac Test Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BuildingEscape",
+				"Mac",
+				"Test",
+				"/Users/skippern/Documents/src/udemy_UE4_course/UE4Editor/Section_03/BuildingEscape 4.21/BuildingEscape.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"BuildingEscape Mac Test Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.21"
+			}
+		},
+		{
+			"label": "BuildingEscape Mac Test Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BuildingEscape",
+				"Mac",
+				"Test",
+				"/Users/skippern/Documents/src/udemy_UE4_course/UE4Editor/Section_03/BuildingEscape 4.21/BuildingEscape.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.21"
+			}
+		},
+		{
+			"label": "BuildingEscapeEditor Mac Debug Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BuildingEscapeEditor",
+				"Mac",
+				"Debug",
+				"/Users/skippern/Documents/src/udemy_UE4_course/UE4Editor/Section_03/BuildingEscape 4.21/BuildingEscape.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.21"
+			}
+		},
+		{
+			"label": "BuildingEscapeEditor Mac Debug Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BuildingEscapeEditor",
+				"Mac",
+				"Debug",
+				"/Users/skippern/Documents/src/udemy_UE4_course/UE4Editor/Section_03/BuildingEscape 4.21/BuildingEscape.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"BuildingEscapeEditor Mac Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.21"
+			}
+		},
+		{
+			"label": "BuildingEscapeEditor Mac Debug Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BuildingEscapeEditor",
+				"Mac",
+				"Debug",
+				"/Users/skippern/Documents/src/udemy_UE4_course/UE4Editor/Section_03/BuildingEscape 4.21/BuildingEscape.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.21"
+			}
+		},
+		{
+			"label": "BuildingEscapeEditor Mac DebugGame Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BuildingEscapeEditor",
+				"Mac",
+				"DebugGame",
+				"/Users/skippern/Documents/src/udemy_UE4_course/UE4Editor/Section_03/BuildingEscape 4.21/BuildingEscape.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.21"
+			}
+		},
+		{
+			"label": "BuildingEscapeEditor Mac DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BuildingEscapeEditor",
+				"Mac",
+				"DebugGame",
+				"/Users/skippern/Documents/src/udemy_UE4_course/UE4Editor/Section_03/BuildingEscape 4.21/BuildingEscape.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"BuildingEscapeEditor Mac DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.21"
+			}
+		},
+		{
+			"label": "BuildingEscapeEditor Mac DebugGame Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BuildingEscapeEditor",
+				"Mac",
+				"DebugGame",
+				"/Users/skippern/Documents/src/udemy_UE4_course/UE4Editor/Section_03/BuildingEscape 4.21/BuildingEscape.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.21"
+			}
+		},
+		{
+			"label": "BuildingEscapeEditor Mac Development Build",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BuildingEscapeEditor",
+				"Mac",
+				"Development",
+				"/Users/skippern/Documents/src/udemy_UE4_course/UE4Editor/Section_03/BuildingEscape 4.21/BuildingEscape.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.21"
+			}
+		},
+		{
+			"label": "BuildingEscapeEditor Mac Development Rebuild",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BuildingEscapeEditor",
+				"Mac",
+				"Development",
+				"/Users/skippern/Documents/src/udemy_UE4_course/UE4Editor/Section_03/BuildingEscape 4.21/BuildingEscape.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"BuildingEscapeEditor Mac Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.21"
+			}
+		},
+		{
+			"label": "BuildingEscapeEditor Mac Development Clean",
+			"group": "build",
+			"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+			"args": [
+				"BuildingEscapeEditor",
+				"Mac",
+				"Development",
+				"/Users/skippern/Documents/src/udemy_UE4_course/UE4Editor/Section_03/BuildingEscape 4.21/BuildingEscape.uproject",
+				"-waitmutex",
+				"-clean"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "/Users/Shared/Epic Games/UE_4.21"
+			}
+		}
+	]
+}
