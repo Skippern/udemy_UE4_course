@@ -38,6 +38,10 @@
 ## macOS
 .DS_Store
 
+## Visual Studio Code
+.vscode
+*.code-workspace
+
 ## Visual Studio
 *.vs/
 */.suo
@@ -101,20 +105,3 @@ UE4Editor/*/Build/
 UE4Editor/*/DerivedDataCahce/
 UE4Editor/*/Intermediate/
 UE4Editor/*/Saved/
-
-
-UE4Editor/Section_01/Binaries/
-UE4Editor/Section_01/Build/
-UE4Editor/Section_01/DerivedDataCahce/
-UE4Editor/Section_01/Intermediate/
-UE4Editor/Section_01/Saved/
-
-
-UE4Editor/Section_03/BuildingEscape/Binaries/
-UE4Editor/Section_03/BuildingEscape/Build/
-UE4Editor/Section_03/BuildingEscape/DerivedDataCahce/
-UE4Editor/Section_03/BuildingEscape/Intermediate/
-UE4Editor/Section_03/BuildingEscape/Saved/
-UE4Editor/Section_03/BuildingEscape/Content/StarterContent/
-*BuiltData.uasset
-UE4Editor/Section_03/BuildingEscape/Content/*_BuiltData.uasset
